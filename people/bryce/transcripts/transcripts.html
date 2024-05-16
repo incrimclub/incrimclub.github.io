@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unnamed</title>
+    <style>
+      body{
+      background-color: #ededed;
+    }
+      #fileContent {
+    	width: 100%; /* Adjust width to fit the screen */
+    	overflow-x: auto;
+    	overflow: break-word;
+    	font-size: 0.5vw; /* Adjust font size relative to viewport width */
+	}	
+	@media (max-width: 1000px) {
+		#fileContent {
+    		width: 100%; /* Adjust width to fit the screen */
+    		overflow-x: auto;
+    		overflow: break-word;
+    		font-size: 3.5vw; /* Adjust font size relative to viewport width */
+		}
+	}
+
+      li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+
+       a {
+        display: inline-block;
+        width: 200px;
+        text-align: center;
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: #f0f0f0;
+        border: 1px solid #cccccc;
+        text-decoration: none;
+        color: #333333;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        font-size: 15px;
+      }
+
+      a:hover {
+        background-color: #e0e0e0;
+        color: #555555;
+      }
+
+      /* Add flexbox styling */
+      #importantFiles,
+      #nonImportantFiles {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #importantFiles li,
+      #nonImportantFiles li {
+        flex: 1 0 200px; /* Adjust this value as needed */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Pages</h2>
+    <ul class="pages">
+      <li>
+        <a href="https://incrimclub.github.io/people/bryce/pages/bryce.html"
+          >Back To Bryce</a
+        >
+      </li>
+    </ul>
+
+    <h2>Important Transcripts</h2>
+    <ul id="importantFiles">
+      <li>
+        <a href="#" onclick="loadFile('Chloe Nelson-transcript-decoded.txt')"
+          >Chloe Nelson Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('paige carter-transcript-decoded.txt')"
+          >Paige Carter Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('Abbey Hubbard-transcript-decoded.txt')"
+          >Abby Hubbard Transcript</a
+        >
+      </li>
+
+      <!-- Add more important file links as needed -->
+    </ul>
+
+    <h2>Non-Important Transcripts</h2>
+    <ul id="nonImportantFiles">
+      <li>
+        <a href="#" onclick="loadFile('Connor Clair-transcript-decoded.txt')"
+          >Connor Clair Transcript</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          onclick="loadFile('hailey stellmach-transcript-decoded.txt')"
+          >Hailey Stellmach Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('Jaeland Burton-transcript-decoded.txt')"
+          >Jaeland Burton Transcript</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          onclick="loadFile('Benjamin Fonnesbeck-transcript-decoded.txt')"
+          >Benjamin Fonnesbeck Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('tyson saggers-transcript-decoded.txt')"
+          >Tyson Saggers Transcript</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          onclick="loadFile('Tristen Etherington-transcript-decoded.txt')"
+          >Tristen Etherington Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('Tanner Henrie-transcript-decoded.txt')"
+          >Tanner Henrie Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('Landon Johnson-transcript-decoded.txt')"
+          >Landon Johnson Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('kyle jenson-transcript-decoded.txt')"
+          >Kyle Jenson Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('jaxson hunting -transcript-decoded.txt')"
+          >Jaxson Hunting Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('brenton skaoug-transcript-decoded.txt')"
+          >Brenton Skaoug Transcript</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          onclick="loadFile('Madeline Halligan-transcript-decoded.txt')"
+          >Madeline Halligan Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('Aiden Bartlett-transcript-decoded.txt')"
+          >Aiden Bartlett Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('Dylan Searle-transcript-decoded.txt')"
+          >Dylan Searle Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('Emmalee Ribao-transcript-decoded.txt')"
+          >Emmalee Ribao Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('Enoch Skoubye-transcript-decoded.txt')"
+          >Enoch Skoubye Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('grayson maughn-transcript-decoded.txt')"
+          >Grayson Maughn Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('Destry Maughan-transcript-decoded.txt')"
+          >Destry Maughan Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('baylee petersen-transcript-decoded.txt')"
+          >Baylee Petersen Transcript</a
+        >
+      </li>
+      <li>
+        <a href="#" onclick="loadFile('westley davis-transcript-decoded.txt')"
+          >Westley Davis Transcript</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          onclick="loadFile('Whitney Petrovich-transcript-decoded.txt')"
+          >Whitney Petrovich Transcript</a
+        >
+      </li>
+    </ul>
+
+    <div id="fileContent"></div>
+
+    <script>
+      function loadFile(filename) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            var decodedText = decodeURIComponent(escape(this.responseText));
+            document.getElementById("fileContent").innerHTML =
+              "<pre style='word-wrap: break-word; white-space: pre-wrap;'>" +
+              decodedText +
+              "</pre>";
+          }
+        };
+        // Update the path to match the actual directory structure
+        xhttp.open("GET", filename, true);
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>
